@@ -1,0 +1,638 @@
+.imageMapa{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.mapas{
+    display: block;
+}
+.mapas p{
+    margin: 0;
+    padding:20px;
+}
+.seleccionador{
+    font-size: 25px;
+    text-align: center;
+}
+.secciondatos{
+    height: 300px;
+    width: max-content;
+    font-size: 15px;
+}
+.contenedormapa{
+    width: 50%;
+}
+.contenedormapa img{
+    max-width: 100%;
+}
+.contenedorvideo{
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+}
+.grafo-iframe{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.date{
+    background-color: transparent;
+    font-size: 18px;
+    margin: 15px 0;
+}
+.datospequenos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* font-size: 20px; */
+}
+.datospreliminares h1{
+    /* font-size: 40px; */
+    margin: 10px 0 0 0;
+}
+.datospreliminares{
+    text-align: center;
+    margin: 15px 0;
+    /* font-size: 1.3em; */
+}
+.fallecidos{
+    width: auto;
+    /* height: 100%; */
+    padding: 10px;
+    background-color: #62b6cb;
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid #1b4965;
+    border-radius: 10px;
+    margin: 3px;
+}
+.fallecidos h1,h2,h4{ 
+    margin: 5px;
+}
+.pruebas{
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    background-color: #62b6cb;
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid #1b4965;
+    border-radius: 10px;
+    margin: 3px;
+}
+.pruebas h1,h2,h4{
+    margin: 5px;
+}
+.hospitalizados{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #62b6cb;
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid #1b4965;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+.hospitalizados h1,h2,h4{
+    margin: 5px;
+}
+/* toggle revisión */
+.togle{
+    width: 100%;
+    height: 100%;
+    /* Para visualizar */
+}
+.caratoggle{
+    border-radius: 13px;
+    cursor: pointer;
+    display:block;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+    background-color: #ffa070;
+    transition: all 300ms;
+    box-shadow: inset 0 0 6px -0 rgba(0, 0, 0, 0.7);
+}
+.caratoggle:before{
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:#1b4965;
+    transform: translate(calc(60px - 25px),0);
+    transition: all 300ms;
+}
+.checkbox:checked ~ .caratoggle:before{
+    transform:translate(0px,0px);
+}
+.checkbox:checked ~ .caratoggle{
+    background-color: #5fa8d3;
+}
+.checkbox{
+    display: none;
+}
+.contenedortoggle{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+.controles{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.boton{
+    border-radius: 5px;
+    border: 1.5px solid #1b4965;
+    height: 30px;
+    font-size: 15px;
+    background-color: #5fa8d3;
+}
+.datosestadisticos{
+    display: flex;
+    flex-shrink: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contenedorgrafo{
+    height: 45%;
+    width: 45%;
+    /* padding: 20px; */
+    display: block;
+/*  
+    align-items: center; */
+    justify-content: center;
+    margin: 10px 15px;
+}
+.controlesrepdia{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+.controlesbarras{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+/* toggle revisión */
+.toglebarras{
+    width: 100%;
+    height: 100%;
+    /* Para visualizar */
+}
+.caratogglebarras{
+    border-radius: 13px;
+    cursor: pointer;
+    display:block;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+    background-color: #ffa070;
+    transition: all 300ms;
+    box-shadow: inset 0 0 6px -0 rgba(0, 0, 0, 0.7);
+}
+.caratogglebarras:before{
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color:#1b4965;
+    transform: translate(calc(60px - 25px),0);
+    transition: all 300ms;
+}
+.checkboxbarras:checked ~ .caratogglebarras:before{
+    transform:translate(0px,0px);
+}
+.checkboxbarras:checked ~ .caratogglebarras{
+    background-color: #5fa8d3;
+}
+.checkboxbarras{
+    display: none;
+}
+.labeltogglebarras{
+    display: flex;
+    font-size: 1.5em;
+}
+/* .grafo{
+    border: 0;
+    height: 370px;
+    width: 35vw;
+    border-radius: 10px;
+    border: 2px solid #5fa8d3;
+    background-color: #d9ecec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grafo-iframe{
+    border: 0;
+    height: 370px;
+    width: 35vw;
+    border-radius: 10px;
+    background-color: #d9ecec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.contenedorgrafo .secciondatos{
+    height: auto;
+    width: max-content;
+    margin: auto;
+    border: 0;
+}
+.datosarriba{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+@media screen and (max-width:1024px){
+    .contenedorgrafo{
+        height: auto;
+        width: auto;
+        padding: 0;
+        padding-bottom: 2em;
+        font-size: 12px;
+    } 
+    .datosestadisticos{
+        display: block;
+    }
+    .contenedorgrafo{
+        margin: 15px 0;
+    }
+    .secciondatos{
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+    /* .datospreliminares{
+        font-size: 1.5em;
+    } */
+    .mapas{
+        font-size: 20px;
+    }
+    .seleccionador{
+        font-size: 1.5em;
+    }
+    .bolita{
+        width: auto;
+        height: auto;
+    }
+    .imageMapa .secciondatos{
+        width: 50%;
+    }
+    .datosestadisticos .conteiner{
+        justify-content: center;
+        padding: 0;
+    }
+   
+    /* .grafo{
+        width: 80vw;
+    }
+    .grafo-iframe{
+        width: 100vw;
+        
+    } */
+    .controles{
+        padding: .5em 0;
+        justify-content: center;
+    }
+    .controlesrepdia{
+        padding: .5em 0;
+        justify-content: center;
+    }
+    .controlesbarras{
+        padding: .5em 0;
+        justify-content: center;
+    }
+    .boton{
+        margin: 0em 1em;
+        font-size: 2em;
+    }
+    
+}
+@media screen and (max-width:767px){
+    .header .conteiner{
+        padding: 16px;
+    }
+    .seleccionador{
+        /* 1 em=12px */
+        font-size: 1.2em; 
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .secciondatos{
+        font-size: 14px;
+    }
+    .contenedortoggle{
+        font-size: 1.7em;
+    }
+    /* .secciondatos h2{
+        font-size: 1.8em;
+        text-align: center;
+    }
+    .datospreliminares h1{
+        font-size: 3em;
+    }
+    .datospreliminares h2{
+        font-size: 1.5em;
+    }
+    .datospequenos h2, h4{
+        font-size: 1.1em;
+    }
+    .datospequenos h1{
+        font-size: 2em;
+    }
+    .datosarriba{
+        font-size: inherit;
+    } */
+    .fallecidos h1{
+        /* font-size: 2.5em; */
+    }
+    .fallecidos{
+        height: auto;
+        width: auto;
+        margin: 0 .5em;
+    }
+    .pruebas{
+        height: auto;
+        width: auto;
+        margin: 0 .5em;
+    }
+    /* .hospitalizados{
+        margin: 2em .5em;
+    } */
+    
+    /* .contenedorgrafo{
+        height: auto;
+        width: auto;
+        font-size: 8px;
+    } */
+    .datosestadisticos{
+        justify-content: center;
+    }
+   
+    /* .datospequenosbajo{
+        display: flex;
+        align-items: center;
+    } */
+   
+}
+@media screen and (max-width:480px){
+    .mapas{
+        font-size: 13px;
+    }
+    .imageMapa{
+        margin: 5px 0 ;
+    }
+    .secciondatos{
+        height: 100%;
+        font-size: 12px;
+        
+    }
+    /* .contenedormapa{
+        width: 40%;
+    } */
+    .datospequenosbajo{
+        margin-bottom: 2em;
+    }
+    .datosestadisticos{
+        margin: 20px 0;
+    }
+    .controles{
+        align-items: center;
+        width: auto;
+        justify-content: center;
+        font-size: 1.3em;
+        padding: 0;
+    }
+    .boton{
+        font-size: .8em;
+    }
+    .controlesbarras{
+        align-items: center;
+        width: auto;
+        justify-content: center;
+        font-size: 1em;
+        padding: 0;
+    }
+    .controlesrepdia{
+        align-items: center;
+        width: auto;
+        justify-content: center;
+        font-size: 1.3em;
+        padding: 0;
+    }
+    .contenedortoggle{
+        font-size: .8em;
+    }
+    /* .grafo{
+        height: 20.5em;
+        width: 70vw;
+    }
+    .grafo-iframe{
+        width: 100vw;
+    } */
+    .contenedorgrafo .secciondatos{
+        height: auto;
+        width: 70vw;
+    }
+    .datospequenosbajo{
+        /* font-size: 1em; */
+        height: auto;
+        width: auto;
+        justify-content: center;
+    }
+    .datospreliminares{
+        /* font-size: 0.7em; */
+        margin:.5em 0;
+    }
+    /* .secciondatos h2, h1, h4{
+        font-size: .9em;
+    } */
+    /* .datospreliminares{
+        font-size: 1.2em;
+    } */
+    .secciondatos .fallecidos{
+        height: auto;
+        width: max-content;
+    }
+    .secciondatos .pruebas{
+        height: auto;
+        width: max-content;
+    }
+    .datospequenosbajo .hospitalizados{
+        height: auto;
+        width: auto;
+    }
+
+}
+@media screen and (max-width:320px){
+    .mapas{
+        height: auto;
+        font-size: 8px;
+    }
+    .imageMapa{
+        display: flex;
+        align-items: center;     
+    }
+    .seleccionador{
+        font-size: 10px;
+    }
+    .seleccionador p, label{
+        font-size: 1.2em;
+        padding: 0.8em 0.2em;
+    }
+    .datospequenos{
+        display: block;
+        text-align: -webkit-center;
+    }
+    .fallecidos{
+        margin: .5em;
+    }
+    .pruebas{
+        margin: .5em;
+    }
+    /* .contenedormapa{
+        width: 30%;    
+    } */
+    .secciondatos{
+        font-size: 8px;
+        height: 100%;
+    }
+    .secciondatos h2{
+        /* font-size: 1.2em; */
+        margin: 0;
+        height: auto;
+    }
+    .datospreliminares{
+        /* font-size: 0.7em; */
+        margin:.5em 0;
+    }
+    /* .datospequenos h2, h1, h4{
+        font-size: .9em;
+    } */
+    .datospequenosbajo .fallecidos{
+        height: 100%;
+        width: auto;
+    }
+    .datospequenosbajo .pruebas{
+        /* height: 100%; */
+        width: 100%;
+    }
+    .hospitalizados{
+        height: 100%;
+        width: 100%;
+    }
+    /* .contenedorgrafo{
+        padding: 1em;
+    } */
+    .controles{
+        align-items: flex-end;
+        width: auto;
+        justify-content: center;
+        /* font-size: 2em; */
+        padding: 0;
+    }
+    
+    .boton{
+        font-size: .8em;
+        height: 2em;
+        margin: 0 .2em;
+    }
+    
+    .controlesbarras{
+        align-items: flex-end;
+        width: auto;
+        justify-content: center;
+        /* font-size: 1em; */
+        padding: 0;
+    }
+    .controlesrepdia{
+        align-items: flex-end;
+        width: auto;
+        justify-content: center;
+        /* font-size: 2em; */
+        padding: 0;
+    }
+    /* .grafo{
+        height: 18em;
+        width: 18em;
+    }
+    .grafo-iframe{
+        width: 100vw;
+        border: 0;
+    } */
+    .contenedorgrafo .secciondatos{
+        height: auto;
+        width: 100%;
+    }
+    .contenedortoggle{
+        /* display: block; */
+        font-size: .6em;
+    }
+    .caratoggle{
+        
+        width: 40px;
+        height: 10px;
+        /* overflow: hidden; */
+        background-color: #ffa070;
+        transition: all 300ms;
+        box-shadow: inset 0 0 6px -0 rgba(0, 0, 0, 0.7);
+    }
+    .labeltogglebarras{
+        padding: 0;
+    }
+    .caratogglebarras{
+        width: 50px;
+        height: 20px;
+        padding: 0;
+    }
+    .caratogglebarras:before{
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color:#1b4965;
+        transform: translate(calc(50px - 20px),0);
+        transition: all 300ms;
+    }
+    .labeltoggle{
+        padding: 0;
+    }
+    .caratoggle{
+        width: 50px;
+        height: 20px;
+        padding: 0;
+    }
+    .caratoggle:before{
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color:#1b4965;
+        transform: translate(calc(50px - 20px),0);
+        transition: all 300ms;
+    }
+    
+}

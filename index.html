@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/boceto.css">
+    <link rel="stylesheet" href="/css/estiloshome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Piura Covid 19</title>
+    <link rel="icon" type="imagen/svg" href="/images/icon.png">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+</head>
+<body>
+    <div class="iconos">
+        <div class="conteiner">
+            <i class="icon-menu burguer-buttom" id="burger-menu"></i>
+            <i class="icon-buscar icon-search" id="buscar-selector"></i>
+         </div>
+    </div>  
+    <header class="header">
+        <div class="conteiner">
+            <div class="logo">
+                <img  src="./images/logocovidult.PNG" height="40px" alt="logocovid">
+            </div>
+            <nav class="menu">
+                
+                <ol>
+                    <li>
+                        <a href="/PrincipalCovid.html">Región</a>
+                    </li>
+                    <li>
+                        <a href="/provincias.html">Provincia</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contactanos</a>
+                    </li>
+                </ol>    
+            </nav>   
+                    <div class="box">
+                        <div class="conteiner1">
+                         <!-- <span class="icon"><i class="fa fa-search"></i></span> -->
+                         <i class="icon-buscar"></i>
+                         <input type="search" id="search" placeholder="Buscar...">
+                         </div>
+                    </div>
+                
+            </div> 
+        </div>          
+    </header>
+    <section id="mapas" class="mapas">
+            <div class="conteiner">
+                <div class="seleccionador">
+                    <p>Mostrar datos de: </p>
+                    <label>
+                        <input class="bolita" type="radio" name="Datos" value="DiresaPiura" > Diresa Piura
+                    </label>
+                    <label>
+                        <input class="bolita" type="radio" name="Datos" value="Minsa" > Minsa
+                    </label>
+                </div>
+                <div class="imageMapa">
+                    <div class="contenedormapa">
+                        <img src="/images/Piura.png" alt="">
+                    </div>
+                    <div class="secciondatos">
+                        <h2>Sábado 13 de junio del 2020</h2>            
+                        <div class="datospreliminares">
+                            <h1>123456</h1>
+                            <h2>Casos detectados</h2>
+                        </div>
+                        <div class="datospequenos">
+                            <div class="fallecidos"> 
+                                <h2>Fallecidos</h2>
+                                <h1>12345</h1> 
+                                <h4>Letalidad 1.23%</h4>
+                            </div>
+                            <div class="pruebas"> 
+                                <h2>Pruebas realizadas</h2>
+                                <h1>12345</h1> 
+                                <h4>Letalidad 1.23%</h4>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+    </section>  
+    <section class="datosestadisticos" id="grafos">
+    <div class="conteiner">
+            <div class="contenedorgrafo">
+                <!-- <div> -->
+                    <div class="controles">
+                        <div class="controles-botones">
+                            <input class="boton" type="button"  value="Casos">
+                            <input class="boton" type="button"  value="Fallecidos">
+                        </div>
+                        <div class="contenedortoggle">
+                            <label class="labeltoggle" for="btntogle"><h4>Logarítmico</h4></label>
+                            <div class="toggle">
+                                <input class="checkbox" type="checkbox" name="btntogle" id="btntogle">
+                                <label class="caratoggle" for="btntogle"></label>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="contenedorvideo">
+                        <iframe class="grafo-iframe" width="560" height="315" src="https://www.youtube.com/embed/93xWmS7F3ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                    </div>      
+                <!-- </div> -->
+            </div>
+                <div class="contenedorgrafo">
+                    <div>
+                        <div class="controlesrepdia">
+                            <div>
+                                <input class="boton" type="button"  value="Casos">
+                                <input class="boton" type="button" value="Fallecidos">
+                            </div>         
+                        </div>
+                        <div class="contenedorvideo">
+                            <iframe class="grafo-iframe" width="560" height="315" src="https://www.youtube.com/embed/93xWmS7F3ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                        </div>
+                    </div>
+                </div>
+            <div class="contenedorgrafo">
+                <div>
+                    <div class="controlesbarras">
+                        <label class="labeltogglebarras" for="btntoglebarras"><h4>Barras horizontales</h4></label>
+                        <div class="togglebarras">  
+                            <input class="checkboxbarras" type="checkbox" name="btntoglebarras" id="btntoglebarras">
+                            <label class="caratogglebarras" for="btntoglebarras"></label>
+                        </div>
+                    </div>
+                    <div class="contenedorvideo">
+                        <iframe class="grafo-iframe" width="560" height="315" src="https://www.youtube.com/embed/93xWmS7F3ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                    </div> 
+                </div>
+            </div>
+            <div class="contenedorgrafo">
+                <div class="secciondatos">
+                    <h2>Reporte del día Sábado 13 de junio del 2020</h2>            
+                    <div class="datospreliminares">
+                        <h1>123456</h1>
+                        <h2>Casos detectados</h2>
+                    </div>
+                    <div class="datospequenosbajo">
+                        <div class="datosarriba">
+                           <div class="fallecidos"> 
+                                <h2>Fallecidos</h2>
+                                <h1>12345</h1> 
+                                <h4>Letalidad 1.23%</h4>
+                            </div>
+                            <div class="pruebas"> 
+                                <h2>Pruebas realizadas</h2>
+                                 <h1>12345</h1> 
+                                <h4>Letalidad 1.23%</h4>
+                            </div>
+                        </div>
+                        <div class="hospitalizados"> 
+                            <h2>hospitalizados</h2>
+                            <h1>12345</h1> 
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="contact" id="contact">
+        <div class="conteiner">
+            <img class="fotopie" src="./images/logocovid3.PNG" alt="logocovid">
+            <h3>Acerca de...</h3>
+        </div>    
+    </footer>
+    <script>
+        const ipad=window.matchMedia('screen and (max-width: 767px');
+        console.log(ipad);
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+
+
+        ipad.addListener(validation);
+
+        function validation(evento){
+            if(evento.matches){
+                burgerButton.addEventListener('click', hideShow);
+            }
+            else{
+                burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+
+        function hideShow(){
+             if(menu.classList.contains('is-active')){      
+                 menu.classList.remove('is-active');
+            }else{
+                menu.classList.add('is-active');
+             }
+        }
+    </script>
+    <script>
+        const ipad2=window.matchMedia('screen and (max-width: 767px');
+        const box = document.querySelector('.box');
+        // console.log(box)
+        const cajabuscar = document.querySelector('#buscar-selector');
+        // console.log(cajabuscar);
+
+        ipad2.addListener(validation2);
+        function validation2(evento2){
+            if(evento2.matches){
+                cajabuscar.addEventListener('click', hideShow2);
+            }
+            else{
+                cajabuscar.removeEventListener('click', hideShow2);
+            }
+        }
+        function hideShow2(){
+             if(box.classList.contains('is-active2')){      
+                 box.classList.remove('is-active2');
+            }else{
+                box.classList.add('is-active2');
+             }
+        }
+    </script>
+</body>
+</html>
