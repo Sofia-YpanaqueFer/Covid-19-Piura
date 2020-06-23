@@ -202,7 +202,7 @@ ol{
         position: fixed;
         left: 5px;
         top: 5px;
-        z-index: 3;
+        z-index: 5;
     }
     .icon-search{
         display: block;
@@ -216,7 +216,7 @@ ol{
         position: fixed;
         right: 5px;
         top: 5px;
-        z-index: 3;
+        z-index: 5;
     }
     .menu{
         position: fixed;
@@ -225,7 +225,7 @@ ol{
         width: 160px;
         left: -160px;
         top: 0;
-        z-index: 2;
+        z-index: 4;
         bottom: 0;
     }
     
