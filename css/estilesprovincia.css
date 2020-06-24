@@ -23,7 +23,7 @@
     object-fit: cover;
     height: 90%;
     object-position: center;
-    
+    border-radius: 50%;
 }
 .mapasprovincia{
     display: flex;

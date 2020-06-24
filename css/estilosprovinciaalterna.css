@@ -1,0 +1,98 @@
+h1{
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.mapasdistrito{
+    margin-top: 20px;
+}
+.mapasprovincia{
+    margin-top: 20px;
+}
+.contenedorprovincia{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 4;
+}
+.name-provincia{
+    width: 25%;
+    text-align: center;
+    margin:20px auto;
+}
+.provincia{
+    text-align: center;
+    width: 150px;
+    max-height: 150px;
+    border: 2px solid #1b4965;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    margin: auto;
+}
+.provincia a{
+    text-decoration: none;
+}
+.name-provincia h3{
+    margin-top: 15px;
+}
+.imagenprovincia{
+    object-fit: cover;  
+}
+.mapasdistrito li{
+    display: block;
+}
+.menudist *{list-style: none;}
+.menudist li{line-height: 180%; margin: 0 auto;
+     width: 25%;}
+.menudist li a{color: #222; text-decoration: none;}
+.menudist li a:before{content: "\025b8"; color: #ddd; margin-right: 4px;}
+.menudist input[name="list"]{
+    position: absolute;
+    left: -1000em;
+}
+.menudist label:before{content: "\025b8"; margin-right: 4px;}
+.menudist input:checked ~ label:before{ content:"\025be";}
+.menudist .interior{display: none;}
+.menudist input:checked ~ ul{display:block;}
+.menudist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.interior li{
+    width: auto;
+}
+
+
+@media screen and (max-width:1023px){
+    .name-provincia{
+        width: 30%;
+    }
+}
+@media screen and (max-width:767px){
+    .name-provincia{
+        width: 40%;
+    }
+    .menudist li{
+        width: 35%;
+    }
+    .interior li{
+        width: auto;
+    }
+}
+@media screen and (max-width:480px){}
+@media screen and (max-width:320px){
+    .menudist li{
+        width: 50%;
+    }
+    .interior li{
+        width: auto;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .name-provincia{
+        width: 100%;
+    }
+    .menudist{
+        padding: 0;
+    }
+}

@@ -9,30 +9,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Piura Covid 19</title>
     <link rel="icon" type="imagen/svg" href="/images/icon.png">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
 </head>
 <body>
+    <div class="iconos">
+        <div class="conteiner">
+            <i class="icon-menu burguer-buttom" id="burger-menu"></i>
+            <i class="icon-buscar icon-search" id="buscar-selector"></i>
+         </div>
+    </div>  
     <header class="header">
         <div class="conteiner">
             <div class="logo">
-                <img  src="./images/logocovid3.PNG" height="50px" alt="logocovid">
+                <a href="/index.html"><img  src="./images/logocovidult.PNG" height="40px" alt="logocovid"></a>
             </div>
-            <div class="menu">
+            <nav class="menu">
+                
                 <ol>
-                    <li>
-                        <a href="/PrincipalCovid.html">Región</a>
-                    </li>
                     <li>
                         <a href="/provincias.html">Provincia</a>
                     </li>
                     <li>
-                        <input class="bottomBuscar" type="text" placeholder="Buscar">
+                        <a href="/descargas.html">Descargas</a>
                     </li>
                     <li>
-                        <a href="#contact">Contáctanos</a>
+                        <a href="/acerca.html">Acerca de</a>
                     </li>
-                </ol>
-            </div>
-            
+                </ol>    
+            </nav>   
+                    <div class="box">
+                        <div class="conteiner1">
+                         <!-- <span class="icon"><i class="fa fa-search"></i></span> -->
+                         <i class="icon-buscar"></i>
+                         <input type="search" id="search" placeholder="Buscar...">
+                         </div>
+                    </div>
+                
+            </div> 
+        </div>          
     </header>
     <div class="conteiner"> 
         <section id="mapas" class="mapasprovincia">
@@ -70,11 +85,63 @@
             </div>
         </section>    
     </div> 
-    <section class="contact" id="contact">
+    <footer class="contact" id="contact">
         <div class="conteiner">
             <img class="fotopie" src="./images/logocovid3.PNG" alt="logocovid">
             <h3>Acerca de...</h3>
         </div>    
-    </section>
+    </footer>
+    <script>
+        const ipad=window.matchMedia('screen and (max-width: 767px');
+        console.log(ipad);
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        // console.log(burgerButton);
+
+
+        ipad.addListener(validation);
+        burgerButton.addEventListener('click', hideShow);
+        function validation(evento){
+            if(evento.matches){
+                burgerButton.addEventListener('click', hideShow);
+            }
+            else{
+                burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+
+        function hideShow(){
+             if(menu.classList.contains('is-active')){      
+                 menu.classList.remove('is-active');
+            }else{
+                menu.classList.add('is-active');
+             }
+        }
+    </script>
+    <script>
+        const ipad2=window.matchMedia('screen and (max-width: 767px');
+        const box = document.querySelector('.box');
+        // console.log(box)
+        const cajabuscar = document.querySelector('#buscar-selector');
+        // console.log(cajabuscar);
+        cajabuscar.addEventListener('click', hideShow2);
+        ipad2.addListener(validation2);
+        function validation2(evento2){
+            if(evento2.matches){
+                cajabuscar.addEventListener('click', hideShow2);
+            }
+            else{
+                cajabuscar.removeEventListener('click', hideShow2);
+            }
+        }
+        function hideShow2(){
+             if(box.classList.contains('is-active2')){      
+                 box.classList.remove('is-active2');
+            }else{
+                box.classList.add('is-active2');
+             }
+        }
+    </script>
 </body>
 </html>

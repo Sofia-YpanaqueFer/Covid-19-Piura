@@ -19,7 +19,7 @@
 .secciondatos{
     height: 300px;
     width: max-content;
-    font-size: 15px;
+    /* font-size: 15px; */
     text-align: center;
 }
 .contenedormapa{
@@ -263,7 +263,7 @@
 
 
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1023px){
     .contenedorgrafo{
         height: auto;
         width: auto;
@@ -346,25 +346,7 @@
     .contenedortoggle{
         font-size: 1.7em;
     }
-    /* .secciondatos h2{
-        font-size: 1.8em;
-        text-align: center;
-    }
-    .datospreliminares h1{
-        font-size: 3em;
-    }
-    .datospreliminares h2{
-        font-size: 1.5em;
-    }
-    .datospequenos h2, h4{
-        font-size: 1.1em;
-    }
-    .datospequenos h1{
-        font-size: 2em;
-    }
-    .datosarriba{
-        font-size: inherit;
-    } */
+  
     .fallecidos h1{
         /* font-size: 2.5em; */
     }
