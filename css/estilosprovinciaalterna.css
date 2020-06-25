@@ -77,8 +77,15 @@ h1{
     .interior li{
         width: auto;
     }
+    .interior {
+        padding: 0 15px;
+    }
 }
-@media screen and (max-width:480px){}
+@media screen and (max-width:480px){
+    .menudist{
+        padding: 0;
+    }
+}
 @media screen and (max-width:320px){
     .menudist li{
         width: 50%;
